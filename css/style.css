@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 8px;
+}
+
+.logo span {
+    color: var(--og-logo-color, var(--gm3-sys-color-on-surface, #1f1f1f));
+    font-family: "Product Sans", Arial, sans-serif;
+    font-size: 22px;
+    line-height: 48px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #E0E0E0;
+    border-radius: 24px;
+    padding: 8px;
+    width: 300px;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    padding: 4px 8px;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+}
+
+.novo_formulario {
+    margin-bottom: 20px;
+}
+
+.forms_template {
+    display: flex;
+    flex-direction: column;
+}
+
+.template {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.template:hover {
+    background-color: #F5F5F5;
+}
+
+.template p {
+    margin-left: 8px;
+}
+
