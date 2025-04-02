@@ -6,15 +6,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="shortcut icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/forms_icon_2023q4.ico" type="image/x-icon>">
-
+    <link rel="shortcut icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/forms_icon_2023q4.ico" type="image/x-icon">
     <title>Google Forms</title>
 </head>
 <body>
     <header>
         <div class="logo">
             <div class="icon-menu" title="Main menu">
-                <button class="menu">
+                <button class="menu icon-btn">
                     <i class="bi bi-list"></i>
                 </button>
             </div>
@@ -26,50 +25,40 @@
         
         <div class="input">
             <a href="#">
-                <span class="material-icons">search</span>
+                <span class="material-icons icon-btn" title="Search">search</span>
             </a>
             <input type="text" placeholder="Pesquisar">
         </div>
-
+    
         <div class="user_options">
             <a href="https://www.google.com.br/intl/en-GB/about/products">
-            <img src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt=""/>
+                <img src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt=""/>
             </a>
-            <i class="bi bi-person-circle"></i>
+            <button class="icon-btn">
+                <i class="bi bi-person-circle"></i>
+            </button>
         </div>
     </header>
 
-
     <main>
-        <section class="novo_formulario">
-            <h3>Iniciar um novo formulário</h3>
-            <div class="forms_template">
-                <div class="template blank">
-                    <span class="material-icons">add</span>
-                    <p>Formulário em branco</p>
+        <div class="container">
+            <section class="novo_formulario">
+                <h3>Iniciar um novo formulário</h3>
+                <div class="forms_template">
+                    <div class="template blank">
+                        <img src="./img/forms-blank-preview.png" alt="Novo Formulário">
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <h3>Formulários recentes</h3>
-            </div>
-
-            <div class="icon_container">
-                <button class="icon-btn">
-                    <span class="material-icons">list</span>
-                </button>
-                <button class="icon-btn">
-                    <span class="material-icons">sort_by_alpha</span>
-                </button>
-                <button class="icon-btn">
-                    <span class="material-icons">folder</span>
-                </button>
-                
-            </div>
-        </section>
+            </section>
+            
+            <section>
+                <h3 class="recent-forms-text">Formulários recentes</h3>
+                <div class="recent-forms">
+                    <p class="title">Ainda não há formulários</p>
+                    <p class="subtitle">Selecione um formulário em branco ou escolha outro modelo acima para começar</p>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer></footer>
 </body>
 </html>
