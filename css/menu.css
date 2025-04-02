@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+}
+
+.menu-btn {
+    /* position: fixed; */
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    color: #5f6368; /* Cor do ícone semelhante ao Google Forms */
+    transition: background 0.3s, border-radius 0.3s;
+}
+
+.menu-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -280px; /* Menu começa escondido */
+    width: 280px;
+    height: 100%;
+    background: #ffffff; /* Fundo branco */
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+#title {
+    padding-left: 20px;
+}
+#title .google {
+    letter-spacing: -1.5px; 
+    font-weight: bold;
+
+}
+
+#title span {
+    padding: 0;
+    display: inline; 
+}
+#title-ul{
+    height: 48px;
+    font-size: 20px;
+    padding: 8px 0 8px 24px;
+
+}
+#title .google .g { color: #4285F4; }
+#title .google .o1 { color: #EA4335; }
+#title .google .o2 { color: #FBBC05; }
+#title .google .g2 { color: #4285F4; }
+#title .google .l { color: #34A853; }
+#title .google .e { color: #EA4335; }
+
+#title .text-form {
+    color: #5F6368;
+}
+
+.content-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.menu a {
+    text-decoration: none;
+}
+.menu span {
+    width: 10px;
+}
+ul {
+    font-family: "Product Sans", Arial, sans-serif;
+    height: 35px;
+}
+hr {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.menu.active {
+    left: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.planilha {
+    padding-left: -50px;
+}
+.forms {
+    padding-left: 12px;
+}
+
+.image-container {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.icon-docs {
+    width: 40px;
+    height: 10px;
+}
+
+
+.menu ul li a {
+    color: #202124;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.menu ul li a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* Estiliza o fundo quando o menu está aberto */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 5;
+}
+
+.menu-overlay.active {
+    display: block;
+}

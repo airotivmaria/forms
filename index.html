@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/menu.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/forms_icon_2023q4.ico" type="image/x-icon">
     <script src="./js/script.js"></script>
@@ -13,10 +14,38 @@
 <body>
     <header>
         <div class="logo">
-            <div class="icon-menu" title="Main menu">
-                <button class="menu icon-btn">
+            <div class="icon-menu" title="main_menu">
+                <button class="menu-btn" id="menu-btn">
                     <i class="bi bi-list"></i>
                 </button>
+                
+                <nav class="menu" id="menu">
+                    <div id="title">
+                        <span class="google">
+                            <span class="g">G</span>
+                            <span class="o1">o</span>
+                            <span class="o2">o</span>
+                            <span class="g2">g</span>
+                            <span class="l">l</span>
+                            <span class="e">e</span>
+                        </span>
+                        <span class="text-form">Formulários</span>
+                    </div>
+                    <ul class="content-menu">
+                        <li><a href="https://docs.google.com/document/u/0/"><img src="img/Google-Docs-Logo.png" alt="">Documentos</a></li>
+                        <li><a href="https://docs.google.com/spreadsheets/u/0/"><img src="img/forms-planilhas.png">Planilhas</a></li>
+                        <li><a href="https://docs.google.com/presentation/u/0/?hl=pt-BR"><img src="img/forms-apresent.png" alt="">Apresentações</a></li>
+                        <li><a href="#"><img src="img/forms_logo.png" alt="" class="forms">Formulários</a></li>
+                        <hr>
+                        <li><a href="#"><img src="img/settings.png" alt="" class="icon-docs">Configurações</a></li>
+                        <li><a href="#"><img src="img/help.png" alt="" class="icon-docs">Ajuda e comentários</a></li>
+                        <hr>
+                        <li><a href="https://drive.google.com/drive/home"><img src="img/forms-drive.png" alt="">Drive</a></li>
+                    </ul>
+                </nav>
+                
+                    
+                </nav>
             </div>
             <a href="#" title="Forms">
                 <img src="./img/forms_logo.png" alt="Logo do Google Forms">
@@ -83,6 +112,7 @@
                 </div>
             </section>
         </div>
+        <script src="./js/menu.js"></script>
     </main>
 </body>
 </html>
