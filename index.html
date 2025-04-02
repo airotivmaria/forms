@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/forms_icon_2023q4.ico" type="image/x-icon">
+    <script src="./js/script.js"></script>
     <title>Google Forms</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
             </div>
             <a href="#" title="Forms">
                 <img src="./img/forms_logo.png" alt="Logo do Google Forms">
-                <span>Forms</span>
+                <span>Formulários</span>
             </a>
         </div>
         
@@ -27,7 +28,7 @@
             <a href="#">
                 <span class="material-icons icon-btn" title="Search">search</span>
             </a>
-            <input type="text" placeholder="Pesquisar">
+            <input type="text" class="search-input" placeholder="Pesquisar">
         </div>
     
         <div class="user_options">
@@ -43,7 +44,7 @@
     <main>
         <div class="container">
             <section class="novo_formulario">
-                <h3>Iniciar um novo formulário</h3>
+                <span>Iniciar um novo formulário</span>
                 <div class="forms_template">
                     <div class="template blank">
                         <img src="./img/forms-blank-preview.png" alt="Novo Formulário">
@@ -52,7 +53,30 @@
             </section>
             
             <section>
-                <h3 class="recent-forms-text">Formulários recentes</h3>
+                <div class="header-container">
+                    <h3 class="recent-forms-text">Formulários recentes</h3>
+                    <div class="dropdown-container">
+                        <div class="dropdown">
+                            <button class="dropdown-button" id="dropdown-button">Pertencem a qualquer pessoa ▼</button>
+                            <div class="dropdown-content" id="dropdown-content">
+                                <a href="#" data-value="anyone">Pertencem a qualquer pessoa</a>
+                                <a href="#" data-value="me">Pertencem a mim</a>
+                                <a href="#" data-value="not-me">Não pertencem a mim</a>
+                            </div>
+                        </div>
+                        <div class="form-icons">
+                            <div class="icon">
+                                <i class="bi bi-list-columns"></i>
+                            </div>
+                            <div class="icon">
+                                <i class="bi bi-sort-alpha-down"></i>
+                            </div>
+                            <div class="icon">
+                                <i class="bi bi-folder"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="recent-forms">
                     <p class="title">Ainda não há formulários</p>
                     <p class="subtitle">Selecione um formulário em branco ou escolha outro modelo acima para começar</p>

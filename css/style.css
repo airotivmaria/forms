@@ -16,7 +16,6 @@ header {
     justify-content: space-between;
     padding: 8px 16px;
     background-color: #fff;
-    border-bottom: 1px solid #E0E0E0;
 }
 
 .bi {
@@ -58,9 +57,16 @@ header {
     align-items: center;
     border-radius: 24px;
     padding: 10px;
-    width: 700px;
+    width: 800px;
     background-color: #F0F4F9;
+    transition: background-color 0.3s;
 }
+
+.input.focused {
+    background-color: #FFF;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
 
 .input span {
     margin-right: 8px;
@@ -102,7 +108,7 @@ main {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -111,12 +117,12 @@ main {
     margin-bottom: 20px;
 }
 
-.novo_formulario h3 {
+.novo_formulario span {
     flex: 1;
-    color: #202124;
+    color: rgb(32, 33, 36);
     font-family: "Google Sans", Roboto, Arial, sans-serif;
     font-size: 16px;
-    font-weight: 550;
+    font-weight: 500;
     margin: 0; 
     line-height: 64px;
 }
@@ -137,17 +143,23 @@ main {
     padding: 16px;
     background-color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
     width: 150px; 
 }
 
 .template:hover {
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .template img {
     width: 100%; 
     height: auto;
+    transition: transform 0.4 ease;
+}
+
+.template:hover img {
+    transform: scale(1.05);
 }
 
 .recent-forms-text {
@@ -158,9 +170,9 @@ main {
     padding-top: 21px;
     padding-right: 0;
     padding-bottom: 19px;
-    color: 202124;
-    font-family: Roboto, Arial, sans-serif;
-    font-weight: 550;
+    color: rgb(32, 33, 36);
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-weight: 500;
 }
 
 .recent-forms {
@@ -169,11 +181,11 @@ main {
     border-radius: 2px;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-    height: 128px;
+    height: auto;
     width: 100%;
 }
 
-.recent-forms .title {
+.title {
     color: #222;
     font-size: 18px;
     margin-bottom: 10px;
@@ -181,9 +193,85 @@ main {
     font-family: Roboto, Arial, sans-serif;
 }
 
-.recent-forms .subtitle {
+.subtitle {
     color: rgb(95, 99, 104);
     font-size: 16px; 
     white-space: nowrap;
     font-family: Roboto, Arial, sans-serif;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+}
+
+.form-icons {
+    display: flex;
+}
+
+.icon {
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 8px 2px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.icon:hover {
+    background-color: #E0E7EE;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-button {
+    background-color: #FFF;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    padding-right: 20px;
+}
+
+.dropdown-button:hover {
+    background-color: #E0E7EE;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; 
+}
+
+.show {
+    display: block;
 }
