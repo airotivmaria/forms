@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário Sem título</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="form-container">
+        <h1>Criar Formulário</h1>
+        <input type="text" id="form-title" placeholder="Título do formulário" maxlength="10">
+        <div id="questions-container">
+            <!-- Perguntas serão adicionadas aqui -->
+        </div>
+        <button onclick="addQuestion()">Adicionar Pergunta</button>
+    </div>
+    <script src="./js/formsCreate.js"></script>
 </body>
 </html>
