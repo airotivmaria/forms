@@ -1,7 +1,6 @@
 const btn_add = document.getElementById("btn_add")
 const create_question = document.createElement('div');
 const container = document.getElementById("questions-container")
-const forms = document.getElementById("form-container")
 
 
 
@@ -19,11 +18,14 @@ function addQuestion(){
     }
     questionsCount ++
     create_question.innerHTML += `
-        <input type="text" name="question_${questionsCount}" placeholder="Titulo ${questionsCount}">
+        <input type="text" name="question_${questionsCount}" placeholder="Pergunta ${questionsCount}">
+        <input type="text" name="question_${questionsCount}" placeholder="Resposta ${questionsCount}">
+
                 <select type="type_${questionsCount}">
                     <option value="text">Resposta Curta</option>
                     <option value="multiple">Múltipla Escolha</option>
                 </select>
+        
 
             `;
 
