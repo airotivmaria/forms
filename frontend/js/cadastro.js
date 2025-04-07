@@ -1,32 +1,27 @@
-document.getElementById('registerForm').addEventListener('submit', async function(event) {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    try {
-        await registerUser(name, email, password);
-        alert('Cadastro realizado com sucesso!');
-    } catch (error) {
-        console.error(error);
-        alert('Erro ao cadastrar usuário: ' + error.message);
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('formId').addEventListener('submit', registerUser);
 });
 
-async function registerUser(name, email, password) {
-    const response = await fetch('http://localhost:5000/api/users/register', {
+async function registerUser(event) {
+    event.preventDefault();
+
+    const response = await fetch('http://localhost:3000/api/users/register', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
+        })
     });
 
-    if (!response.ok) {
-        throw new Error('Erro ao cadastrar usuário: ' + response.statusText);
+    if (response.ok) {
+        const data = await response.json();
+        alert('Usuário cadastrado com sucesso!');
+    } else {
+        const errorData = await response.json();
+        alert('Erro ao cadastrar: ' + errorData.error);
     }
-
-    const data = await response.text();
-    return data;
 }

@@ -1,20 +1,22 @@
 const express = require('express');
-const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const userRoutes = require('./routes/userRoutes');
 
 const app = express();
-const uri = process.env.DATABASE_URL;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+app.use(cors());
+app.use(express.json()); 
 
-async function connect() {
-    try {
-        await client.connect();
-        console.log("Conectado ao MongoDB!");
-    } catch (error) {
-        console.error("Erro ao conectar ao MongoDB:", error);
-    }
-}
+mongoose.connect('mongodb://localhost:27017/meu-banco', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log("Conectado ao MongoDB!");
+}).catch((error) => {
+    console.error("Erro ao conectar ao MongoDB:", error);
+});
 
-connect();
+app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
