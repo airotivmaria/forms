@@ -16,7 +16,7 @@ body {
     cursor: pointer;
     z-index: 10;
     padding: 10px;
-    color: #5f6368; /* Cor do ícone semelhante ao Google Forms */
+    color: #5f6368;
     transition: background 0.3s, border-radius 0.3s;
 }
 
@@ -28,10 +28,10 @@ body {
 .menu {
     position: fixed;
     top: 0;
-    left: -280px; /* Menu começa escondido */
+    left: -280px; 
     width: 280px;
     height: 100%;
-    background: #ffffff; /* Fundo branco */
+    background: #ffffff; 
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease-in-out;
     padding-top: 20px;
@@ -140,9 +140,6 @@ hr {
     background: rgba(0, 0, 0, 0.05);
 }
 
-
-
-/* Estiliza o fundo quando o menu está aberto */
 .menu-overlay {
     position: fixed;
     top: 0;
